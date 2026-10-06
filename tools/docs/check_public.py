@@ -16,6 +16,12 @@ def check(root, denylist=None, rendered=None):
     catalog_path = root / "docs/source/_generated/node_catalog.json"
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
     errors = []
+    release_manifest = root / "release-manifest.json"
+    if release_manifest.exists():
+        for name, digest in json.loads(release_manifest.read_text(encoding="utf-8"))["files"].items():
+            path = root / name
+            if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+                errors.append("Release checksum mismatch: " + name)
     for spec in catalog["nodes"]:
         page = root / "docs/source" / spec["url"].replace(".html", ".rst")
         if not page.exists():

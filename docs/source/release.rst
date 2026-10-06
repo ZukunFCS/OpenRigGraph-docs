@@ -29,7 +29,9 @@ Build with ``python -m sphinx -n -W -b html docs/source docs/build/html``.
 Nitpicky references and warnings fail the release build. See the
 `Sphinx build reference <https://www.sphinx-doc.org/en/master/man/sphinx-build.html>`_.
 Public CI checks standalone docs, inventory/download integrity, and synthetic
-JSON; SDK CI additionally runs source drift and executable/Maya checks.
+JSON structure; SDK CI additionally runs source drift and executable graph checks.
+C embedding and Maya integration checks are release validation steps run with
+the authorized SDK and matching Maya installation.
 
 The release export is allowlisted and scanned before publication. Keep internal
 reports, paths, source histories, protected identifiers, and generated captures
