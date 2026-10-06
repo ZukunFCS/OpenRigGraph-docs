@@ -4,13 +4,13 @@
 > requires an existing ORG SDK; this is a docs-only distribution.
 
 ## Start
-- [Getting started](docs/source/getting_started.rst)
-- [Agent workflow](docs/source/porting/agent_workflow.rst)
-- [Synthetic tutorial](docs/source/porting/tutorial.rst)
-- [Graph nodes](docs/source/nodes/index.rst)
-- [Maya integration](docs/source/maya/index.rst)
-- [C API](docs/source/reference/c_api.rst)
-- [Python API](docs/source/reference/python_api.rst)
-- [CLI](docs/source/reference/cli.rst)
-- [Representation decisions](docs/source/porting/design_decisions.rst)
-- [Machine-readable catalog](docs/source/_generated/node_catalog.json)
+- [Getting started](https://zukunfcs.github.io/OpenRigGraph-docs/getting_started.html)
+- [Agent workflow](https://zukunfcs.github.io/OpenRigGraph-docs/porting/agent_workflow.html)
+- [Synthetic tutorial](https://zukunfcs.github.io/OpenRigGraph-docs/porting/tutorial.html)
+- [Graph nodes](https://zukunfcs.github.io/OpenRigGraph-docs/nodes/index.html)
+- [Maya integration](https://zukunfcs.github.io/OpenRigGraph-docs/maya/index.html)
+- [C API](https://zukunfcs.github.io/OpenRigGraph-docs/reference/c_api.html)
+- [Python API](https://zukunfcs.github.io/OpenRigGraph-docs/reference/python_api.html)
+- [CLI](https://zukunfcs.github.io/OpenRigGraph-docs/reference/cli.html)
+- [Representation decisions](https://zukunfcs.github.io/OpenRigGraph-docs/porting/design_decisions.html)
+- [Machine-readable catalog](https://zukunfcs.github.io/OpenRigGraph-docs/node_catalog.json)

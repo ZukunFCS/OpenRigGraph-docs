@@ -4,16 +4,16 @@
 > requires an existing ORG SDK; this is a docs-only distribution.
 
 ## Start
-- [Getting started](docs/source/getting_started.rst)
-- [Agent workflow](docs/source/porting/agent_workflow.rst)
-- [Synthetic tutorial](docs/source/porting/tutorial.rst)
-- [Graph nodes](docs/source/nodes/index.rst)
-- [Maya integration](docs/source/maya/index.rst)
-- [C API](docs/source/reference/c_api.rst)
-- [Python API](docs/source/reference/python_api.rst)
-- [CLI](docs/source/reference/cli.rst)
-- [Representation decisions](docs/source/porting/design_decisions.rst)
-- [Machine-readable catalog](docs/source/_generated/node_catalog.json)
+- [Getting started](https://zukunfcs.github.io/OpenRigGraph-docs/getting_started.html)
+- [Agent workflow](https://zukunfcs.github.io/OpenRigGraph-docs/porting/agent_workflow.html)
+- [Synthetic tutorial](https://zukunfcs.github.io/OpenRigGraph-docs/porting/tutorial.html)
+- [Graph nodes](https://zukunfcs.github.io/OpenRigGraph-docs/nodes/index.html)
+- [Maya integration](https://zukunfcs.github.io/OpenRigGraph-docs/maya/index.html)
+- [C API](https://zukunfcs.github.io/OpenRigGraph-docs/reference/c_api.html)
+- [Python API](https://zukunfcs.github.io/OpenRigGraph-docs/reference/python_api.html)
+- [CLI](https://zukunfcs.github.io/OpenRigGraph-docs/reference/cli.html)
+- [Representation decisions](https://zukunfcs.github.io/OpenRigGraph-docs/porting/design_decisions.html)
+- [Machine-readable catalog](https://zukunfcs.github.io/OpenRigGraph-docs/node_catalog.json)
 
 
 # docs/source/agents/index.rst
@@ -11350,13 +11350,19 @@ an explicit prerequisite. Public material includes independent examples and
 reusable interfaces; it does not include source assets, captured scenes, custom
 source-node implementations, or runtime binaries.
 
-ReadTheDocs configuration uses version 2, Ubuntu 24.04, Python 3.12, pinned
-Sphinx/theme requirements, HTML, and downloadable HTML ZIP. The documentation
-repository builds without Maya or private source. See the
+The public site is hosted on
+`GitHub Pages <https://zukunfcs.github.io/OpenRigGraph-docs/>`_.
+Validated pushes to ``main`` deploy through ``.github/workflows/docs.yml``;
+pull requests build and validate without deploying. The workflow uses Ubuntu
+24.04, Python 3.12, and pinned Sphinx/theme requirements. Offline HTML and Sphinx
+source ZIP archives are attached to dated GitHub releases. The documentation
+repository builds without Maya or private source.
+
+An optional ReadTheDocs configuration uses version 2 with HTML ZIP output. See the
 `ReadTheDocs configuration reference <https://docs.readthedocs.com/platform/stable/config-file/v2.html>`_.
 
-The main documentation branch supplies latest; a dated documentation tag supplies
-stable. Runtime, Graph IR, binary format, and provider ABI versions are recorded
+The Pages site follows ``main``; ``stable`` records the last reviewed release,
+and dated tags preserve snapshots. Runtime, Graph IR, binary format, and provider ABI versions are recorded
 separately. Future node/API changes must update the reviewed catalog and regenerate
 the reference before publishing.
 

@@ -6,13 +6,19 @@ an explicit prerequisite. Public material includes independent examples and
 reusable interfaces; it does not include source assets, captured scenes, custom
 source-node implementations, or runtime binaries.
 
-ReadTheDocs configuration uses version 2, Ubuntu 24.04, Python 3.12, pinned
-Sphinx/theme requirements, HTML, and downloadable HTML ZIP. The documentation
-repository builds without Maya or private source. See the
+The public site is hosted on
+`GitHub Pages <https://zukunfcs.github.io/OpenRigGraph-docs/>`_.
+Validated pushes to ``main`` deploy through ``.github/workflows/docs.yml``;
+pull requests build and validate without deploying. The workflow uses Ubuntu
+24.04, Python 3.12, and pinned Sphinx/theme requirements. Offline HTML and Sphinx
+source ZIP archives are attached to dated GitHub releases. The documentation
+repository builds without Maya or private source.
+
+An optional ReadTheDocs configuration uses version 2 with HTML ZIP output. See the
 `ReadTheDocs configuration reference <https://docs.readthedocs.com/platform/stable/config-file/v2.html>`_.
 
-The main documentation branch supplies latest; a dated documentation tag supplies
-stable. Runtime, Graph IR, binary format, and provider ABI versions are recorded
+The Pages site follows ``main``; ``stable`` records the last reviewed release,
+and dated tags preserve snapshots. Runtime, Graph IR, binary format, and provider ABI versions are recorded
 separately. Future node/API changes must update the reviewed catalog and regenerate
 the reference before publishing.
 
