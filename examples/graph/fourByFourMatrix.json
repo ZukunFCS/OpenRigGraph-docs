@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outputMatrix[12]"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "fourByFourMatrix",
+      "inputs": {
+        "in30": 2
+      },
+      "params": {}
+    }
+  ]
+}

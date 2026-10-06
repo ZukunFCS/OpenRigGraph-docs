@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outValueX"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "setRange",
+      "inputs": {
+        "valueX": 0.25
+      },
+      "params": {
+        "oldMin": [
+          0,
+          0,
+          0
+        ],
+        "oldMax": [
+          1,
+          1,
+          1
+        ],
+        "min": [
+          0,
+          0,
+          0
+        ],
+        "max": [
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  ]
+}

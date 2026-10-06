@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outValue"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "remapValue",
+      "inputs": {
+        "inputValue": 0.25
+      },
+      "params": {
+        "positions": [
+          0,
+          1
+        ],
+        "values": [
+          0,
+          2
+        ]
+      }
+    }
+  ]
+}

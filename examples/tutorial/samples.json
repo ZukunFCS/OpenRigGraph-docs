@@ -1,0 +1,9 @@
+{
+  "samples": [
+    {"inputs": {"smile": 0, "twist": 0}},
+    {"inputs": {"smile": 0.25, "twist": -15}},
+    {"inputs": {"smile": 1, "twist": 30}},
+    {"inputs": {"smile": -0.1, "twist": 0}},
+    {"inputs": {"smile": 1.1, "twist": 0}}
+  ]
+}

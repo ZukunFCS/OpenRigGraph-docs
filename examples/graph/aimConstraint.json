@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.constraintRotateX"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "aimConstraint",
+      "inputs": {},
+      "params": {
+        "targets": [
+          {
+            "translate": [
+              0,
+              0,
+              1
+            ],
+            "weight": 1
+          }
+        ]
+      }
+    }
+  ]
+}

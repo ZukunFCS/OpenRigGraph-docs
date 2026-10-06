@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.response"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "RigLogic",
+      "inputs": {
+        "x": 2
+      },
+      "params": {
+        "interface": {
+          "inputs": [
+            "x"
+          ],
+          "outputs": [
+            "response"
+          ]
+        },
+        "resource": "example_resource"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "example_resource",
+      "type": "example.identity"
+    }
+  ]
+}

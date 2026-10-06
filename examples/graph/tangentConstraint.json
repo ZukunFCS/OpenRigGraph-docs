@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.constraintRotateX"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "tangentConstraint",
+      "inputs": {},
+      "params": {
+        "degree": 1,
+        "controlPoints": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        "knots": [
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    }
+  ]
+}

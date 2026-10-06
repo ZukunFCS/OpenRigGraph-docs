@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outputMatrix[12]"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "surfaceFrame",
+      "inputs": {},
+      "params": {
+        "position0": [
+          0,
+          0,
+          0
+        ],
+        "position1": [
+          1,
+          0,
+          0
+        ],
+        "position2": [
+          0,
+          1,
+          0
+        ]
+      }
+    }
+  ]
+}

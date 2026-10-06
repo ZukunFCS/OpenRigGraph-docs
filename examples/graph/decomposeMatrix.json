@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outputRotateX"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "decomposeMatrix",
+      "inputs": {},
+      "params": {
+        "inputMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    }
+  ]
+}

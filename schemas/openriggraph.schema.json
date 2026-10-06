@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openriggraph.org/schemas/openriggraph.schema.json",
+  "title": "OpenRigGraph Graph IR",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "version": {
+      "type": "integer",
+      "enum": [1, 2]
+    },
+    "format": {
+      "type": "string",
+      "enum": ["OpenRigGraph"]
+    },
+    "controllers": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/controller"}
+    },
+    "resources": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/resource"}
+    },
+    "outputs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/output"}
+    },
+    "output_map": {
+      "type": "object",
+      "additionalProperties": {"$ref": "#/$defs/outputMapValue"}
+    },
+    "nodes": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {"$ref": "#/$defs/node"}
+        },
+        {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/$defs/nodeObjectValue"}
+        }
+      ]
+    },
+    "connections": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/connection"}
+    },
+    "mappings": {
+      "type": "array",
+      "items": {"type": "object", "additionalProperties": true}
+    },
+    "interaction_groups": {
+      "type": "array",
+      "items": {"type": "object", "additionalProperties": true}
+    }
+  },
+  "$defs": {
+    "controller": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "min": {"type": "number"},
+        "max": {"type": "number"},
+        "default": {"type": "number"},
+        "clamp": {"type": "boolean"},
+        "ui": {"type": "object", "additionalProperties": true}
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "type": {
+          "type": "string",
+          "enum": ["blendshape", "morph", "pose", "joint", "joint_center", "animated_map", "scalar"]
+        },
+        "index": {"type": "integer", "minimum": 0},
+        "joint_index": {"type": "integer", "minimum": 0},
+        "param_offset": {"type": "integer", "minimum": 0},
+        "component": {"type": "integer", "minimum": 0, "maximum": 2},
+        "space": {"type": "string", "enum": ["model"]},
+        "mode": {"type": "string", "enum": ["additive"]},
+        "clamp": {"type": "boolean"},
+        "source": {"$ref": "#/$defs/endpoint"}
+      }
+    },
+    "outputMapValue": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["blendshape", "morph", "pose", "joint", "joint_center", "animated_map", "scalar"]
+        },
+        "index": {"type": "integer", "minimum": 0},
+        "joint_index": {"type": "integer", "minimum": 0},
+        "param_offset": {"type": "integer", "minimum": 0},
+        "component": {"type": "integer", "minimum": 0, "maximum": 2},
+        "space": {"type": "string", "enum": ["model"]},
+        "mode": {"type": "string", "enum": ["additive"]},
+        "clamp": {"type": "boolean"},
+        "source": {"$ref": "#/$defs/endpoint"}
+      }
+    },
+    "resource": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["name", "type"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["name", "type"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "minLength": 1},
+        "inputs": {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/$defs/endpoint"}
+        },
+        "params": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "outputs": {
+          "type": ["object", "array"],
+          "additionalProperties": true
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "nodeObjectValue": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "type": {"type": "string", "minLength": 1},
+        "inputs": {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/$defs/endpoint"}
+        },
+        "params": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "outputs": {
+          "type": ["object", "array"],
+          "additionalProperties": true
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+    "connection": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "src": {"$ref": "#/$defs/endpoint"},
+        "source": {"$ref": "#/$defs/endpoint"},
+        "dst": {"type": "string"},
+        "destination": {"type": "string"}
+      }
+    },
+    "endpoint": {
+      "oneOf": [
+        {"type": "number"},
+        {"type": "string"},
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "const": {"type": "number"},
+            "value": {"type": "number"},
+            "control": {"type": "string"},
+            "node": {"type": "string"},
+            "output": {"type": "string"},
+            "source": {"$ref": "#/$defs/endpoint"}
+          }
+        }
+      ]
+    }
+  }
+}

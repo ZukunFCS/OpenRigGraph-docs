@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outputX"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "multiplyDivide",
+      "inputs": {
+        "input1X": 6,
+        "input2X": 2
+      },
+      "params": {
+        "operation": 2
+      }
+    }
+  ]
+}

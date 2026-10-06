@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.positionX"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "curveSample",
+      "inputs": {
+        "parameter": 0.5
+      },
+      "params": {
+        "degree": 1,
+        "controlPoints": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        "knots": [
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    }
+  ]
+}

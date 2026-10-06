@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outputMatrix[12]"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "composeMatrix",
+      "inputs": {},
+      "params": {
+        "inputTranslate": [
+          2,
+          0,
+          0
+        ]
+      }
+    }
+  ]
+}

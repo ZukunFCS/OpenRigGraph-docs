@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outputQuatW"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "quatAdd",
+      "inputs": {},
+      "params": {}
+    }
+  ]
+}

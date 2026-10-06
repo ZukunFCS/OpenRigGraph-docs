@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.rotateX"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "ikRP",
+      "inputs": {},
+      "params": {}
+    }
+  ]
+}

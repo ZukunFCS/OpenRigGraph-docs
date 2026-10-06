@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.angle"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "angleBetween",
+      "inputs": {},
+      "params": {
+        "vector1": [
+          1,
+          0,
+          0
+        ],
+        "vector2": [
+          0,
+          1,
+          0
+        ]
+      }
+    }
+  ]
+}

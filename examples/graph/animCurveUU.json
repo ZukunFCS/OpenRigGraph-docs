@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.output"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "animCurveUU",
+      "inputs": {
+        "input": 0.25
+      },
+      "params": {
+        "keys": [
+          {
+            "input": 0,
+            "value": 0
+          },
+          {
+            "input": 1,
+            "value": 2
+          }
+        ]
+      }
+    }
+  ]
+}

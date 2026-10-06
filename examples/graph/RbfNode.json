@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.response"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "RbfNode",
+      "inputs": {
+        "x": 0
+      },
+      "params": {
+        "input_order": [
+          "x"
+        ],
+        "centers": [
+          [
+            0
+          ]
+        ],
+        "kernel": "gaussian",
+        "outputs": {
+          "response": {
+            "coefficients": [
+              1
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

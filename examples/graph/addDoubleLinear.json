@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.output"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "addDoubleLinear",
+      "inputs": {
+        "input1": 1,
+        "input2": 2
+      },
+      "params": {}
+    }
+  ]
+}

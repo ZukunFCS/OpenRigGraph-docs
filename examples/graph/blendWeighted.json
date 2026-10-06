@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.output"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "blendWeighted",
+      "inputs": {
+        "input[0]": 2,
+        "weight[0]": 0.25
+      },
+      "params": {}
+    }
+  ]
+}

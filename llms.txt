@@ -1,0 +1,16 @@
+# OpenRigGraph
+
+> Renderer-neutral character rig graph runtime documentation. Running examples
+> requires an existing ORG SDK; this is a docs-only distribution.
+
+## Start
+- [Getting started](docs/source/getting_started.rst)
+- [Agent workflow](docs/source/porting/agent_workflow.rst)
+- [Synthetic tutorial](docs/source/porting/tutorial.rst)
+- [Graph nodes](docs/source/nodes/index.rst)
+- [Maya integration](docs/source/maya/index.rst)
+- [C API](docs/source/reference/c_api.rst)
+- [Python API](docs/source/reference/python_api.rst)
+- [CLI](docs/source/reference/cli.rst)
+- [Representation decisions](docs/source/porting/design_decisions.rst)
+- [Machine-readable catalog](docs/source/_generated/node_catalog.json)

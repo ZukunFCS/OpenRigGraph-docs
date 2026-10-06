@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outColorR"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "condition",
+      "inputs": {
+        "firstTerm": 2,
+        "secondTerm": 1,
+        "colorIfTrueR": 7
+      },
+      "params": {
+        "operation": 2
+      }
+    }
+  ]
+}

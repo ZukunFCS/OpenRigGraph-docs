@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.positionZ"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "closestPointOnSurface",
+      "inputs": {},
+      "params": {
+        "degreeU": 1,
+        "degreeV": 1,
+        "uCount": 2,
+        "vCount": 2,
+        "controlPoints": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      }
+    }
+  ]
+}

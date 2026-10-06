@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.output"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "SampledNode",
+      "inputs": {
+        "x": 0.25
+      },
+      "params": {
+        "interpolation": "linear1d",
+        "x": [
+          0,
+          1
+        ],
+        "values": [
+          0,
+          2
+        ]
+      }
+    }
+  ]
+}

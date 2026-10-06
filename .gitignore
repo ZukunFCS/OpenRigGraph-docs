@@ -1,0 +1,6 @@
+.venv/
+docs/build/
+__pycache__/
+*.pyc
+synthetic_org_port/
+example_build/

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outputMatrix0[12]"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "meshSurfaceFrames",
+      "inputs": {},
+      "params": {
+        "faces": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "uvs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "faceVertexUvIndices": [
+          0,
+          1,
+          2
+        ],
+        "attachments": [
+          {
+            "faceIndex": 0,
+            "coordinate": [
+              0,
+              0
+            ]
+          }
+        ],
+        "position0": [
+          0,
+          0,
+          0
+        ],
+        "position1": [
+          1,
+          0,
+          0
+        ],
+        "position2": [
+          0,
+          1,
+          0
+        ]
+      }
+    }
+  ]
+}

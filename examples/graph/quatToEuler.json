@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outputRotateX"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "quatToEuler",
+      "inputs": {},
+      "params": {}
+    }
+  ]
+}

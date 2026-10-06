@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outputX"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "reverse",
+      "inputs": {
+        "inputX": 0.25
+      },
+      "params": {}
+    }
+  ]
+}

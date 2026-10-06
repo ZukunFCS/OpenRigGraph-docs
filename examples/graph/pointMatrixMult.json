@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outputX"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "pointMatrixMult",
+      "inputs": {},
+      "params": {
+        "inPoint": [
+          2,
+          0,
+          0
+        ],
+        "inMatrix": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    }
+  ]
+}

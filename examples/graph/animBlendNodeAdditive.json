@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.output"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "animBlendNodeAdditive",
+      "inputs": {
+        "inputA": 2,
+        "inputB": 4,
+        "weightA": 0.5,
+        "weightB": 0.25
+      },
+      "params": {}
+    }
+  ]
+}

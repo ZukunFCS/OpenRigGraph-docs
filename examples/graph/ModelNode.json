@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.response"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "ModelNode",
+      "inputs": {
+        "x": 3
+      },
+      "params": {
+        "backend": "sparse_linear",
+        "outputs": {
+          "response": {
+            "bias": 1,
+            "weights": {
+              "x": 2
+            }
+          }
+        }
+      }
+    }
+  ]
+}

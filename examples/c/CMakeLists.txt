@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.25)
+project(ORGDocumentationExamples LANGUAGES C CXX)
+find_package(OpenRigGraph CONFIG REQUIRED)
+add_executable(identity_provider identity_provider.c)
+set_target_properties(identity_provider PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries(identity_provider PRIVATE OpenRigGraph::openriggraph)

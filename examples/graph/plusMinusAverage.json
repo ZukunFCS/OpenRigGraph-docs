@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.output1D"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "plusMinusAverage",
+      "inputs": {
+        "input1D[0]": 2,
+        "input1D[3]": 4
+      },
+      "params": {
+        "operation": 1
+      }
+    }
+  ]
+}

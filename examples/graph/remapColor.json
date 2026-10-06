@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.outColorR"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "remapColor",
+      "inputs": {
+        "colorR": 0.25
+      },
+      "params": {
+        "color": [
+          {
+            "position": 0,
+            "color": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "position": 1,
+            "color": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

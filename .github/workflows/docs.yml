@@ -1,0 +1,23 @@
+name: Public documentation
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  docs:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: docs/requirements.txt
+      - run: python -m pip install -r docs/requirements.txt
+      - run: python tools/docs/check_public.py
+      - run: python -m sphinx -n -W -b html docs/source docs/build/html
+      - run: python tools/docs/check_public.py --rendered docs/build/html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: documentation-html
+          path: docs/build/html

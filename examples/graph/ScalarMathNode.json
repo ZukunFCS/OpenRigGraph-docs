@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "format": "OpenRigGraph",
+  "controllers": [],
+  "outputs": [
+    {
+      "name": "result",
+      "type": "scalar",
+      "source": "example.output"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "example",
+      "type": "ScalarMathNode",
+      "inputs": {
+        "a": 2,
+        "b": 3
+      },
+      "params": {
+        "op": "add"
+      }
+    }
+  ]
+}

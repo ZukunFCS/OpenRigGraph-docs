@@ -1,0 +1,63 @@
+openRigGraphBlendShapeBatch
+===========================
+
+Evaluate sparse blendshape target groups into packed points.
+
+**Layer:** Maya integration node. **Type identifier:** ``openRigGraphBlendShapeBatch``.
+
+When to use
+-----------
+
+Use when captured sparse targets and in-betweens share a stable point layout.
+
+Attributes
+----------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 20 15 40
+
+   * - Name
+     - Type
+     - Default
+     - Meaning
+   * - packagePath
+     - string
+     - empty
+     - input / configuration; Path to the node's explicitly prepared geometry package. Short name: ``pp``.
+   * - reloadToken
+     - integer
+     - 0
+     - input / configuration; Increment after replacing a resource at the same path to force reload. Short name: ``rt``.
+   * - packedValues
+     - double[]
+     - empty
+     - input / configuration; Packed scalar data with indices defined by the graph/package contract. Short name: ``pv``.
+   * - outputPoints
+     - double[]
+     - computed
+     - output; Packed XYZ points in package order; every point occupies three doubles. Short name: ``op``.
+
+Wiring and resource contract
+----------------------------
+
+Package bases, target weight indices, sparse vertex indices, and XYZ deltas must agree. Packed output is points, not a mesh object.
+
+See :doc:`shared integration contracts <contracts>` for packed indices, typed units, reloads, package schemas, and safe reconnection.
+
+Usage
+-----
+
+.. code-block:: python
+
+   import maya.cmds as cmds
+   node = cmds.createNode("openRigGraphBlendShapeBatch", name="exampleBlendShapeBatch")
+
+This creates the DG interface; it does not prepare a graph, cache, or geometry package. Configure the listed inputs before requesting its outputs.
+
+Download the :download:`synthetic Maya interface checks <../../../examples/maya/check_interfaces.py>` and the :doc:`complete porting tutorial <../porting/tutorial>`.
+
+Validation
+----------
+
+Check actual attribute types and logical indices, then compare the connected output across changing inputs and fractional times. Node creation alone is not deformation parity. Reject stale/missing resources and layouts that do not match the package.
